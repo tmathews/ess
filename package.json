@@ -1,0 +1,25 @@
+{
+  "name": "ess",
+  "version": "1.0.0",
+  "description": "Server side events library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tmathews/ess"
+  },
+  "keywords": [
+    "SSE",
+    "server",
+    "side",
+    "events"
+  ],
+  "author": "Thomas Mathews",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmathews/ess/issues"
+  },
+  "homepage": "https://github.com/tmathews/ess"
+}
