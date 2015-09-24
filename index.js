@@ -39,14 +39,17 @@ Heart.prototype.stop = function() {
 };
 
 var sse = {
-  prepare: function prepareServerEventResponse (req, res) {
+  prepare: function prepareServerEventResponse (req, res, init) {
     req.socket.setTimeout(Infinity);
     res.writeHead(200, {
       "Content-Type": "text/event-stream",
       "Cache-Control": "no-cache",
       "Connection": "keep-alive",
     });
-    res.write("\n");
+    if (!init) {
+      init = "\n";
+    }
+    res.write(init);
   },
 
   send: function sendServerEvent (res, data, ev, id) {
