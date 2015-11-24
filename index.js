@@ -40,7 +40,7 @@ Heart.prototype.stop = function() {
 
 var sse = {
   prepare: function prepareServerEventResponse (req, res, init) {
-    req.socket.setTimeout(Infinity);
+    req.socket.setTimeout(Number.MAX_SAFE_INTEGER || Infinity);
     res.writeHead(200, {
       "Content-Type": "text/event-stream",
       "Cache-Control": "no-cache",
